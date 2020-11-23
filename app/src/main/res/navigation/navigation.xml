@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment">
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.example.praktikum7.TittleFragment"
+        android:label="Intro"
+        tools:layout="@layout/fragment_tittle">
+        <action
+
+            android:id="@+id/action_titleFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.praktikum7.GameFragment"
+        android:label="Game"
+        tools:layout="@layout/fragment_game">
+        <action
+
+            android:id="@+id/action_gameFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment"
+            app:popUpTo="@+id/gameFragment"
+            app:popUpToInclusive="true" />
+        <action
+
+            android:id="@+id/action_gameFragment_to_gameWonFragment"
+            app:destination="@id/gameWonFragment"
+            app:popUpTo="@+id/gameFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment2"
+        android:name="com.example.praktikum7.GameFragment2"
+        android:label="Game no 2"
+        tools:layout="@layout/fragment_game2">
+        <action
+
+            android:id="@+id/action_gameFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment"
+            app:popUpTo="@+id/gameFragment2"
+            app:popUpToInclusive="true" />
+        <action
+
+            android:id="@+id/action_gameFragment_to_gameWonFragment2"
+            app:destination="@id/gameWonFragment2"
+            app:popUpTo="@+id/gameFragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment3"
+        android:name="com.example.praktikum7.GameFragment3"
+        android:label="Game no 3"
+        tools:layout="@layout/fragment_game3">
+        <action
+
+            android:id="@+id/action_gameFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment"
+            app:popUpTo="@+id/gameFragment"
+            app:popUpToInclusive="true" />
+        <action
+
+            android:id="@+id/action_gameFragment_to_gameWonFragment3"
+            app:destination="@id/gameWonFragment3"
+            app:popUpTo="@+id/gameWonFragment3"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameOverFragment"
+
+        android:name="com.example.praktikum7.GameOverFragment"
+        android:label="Game Failed"
+        tools:layout="@layout/fragment_game_over">
+        <action
+
+            android:id="@+id/action_gameOverFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:popUpTo="@+id/titleFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameWonFragment"
+
+        android:name="com.example.praktikum7.GameWonFragment"
+        android:label="Game Won"
+        tools:layout="@layout/fragment_game_won">
+        <action
+
+            android:id="@+id/action_gameWonFragment_to_gamefragment2"
+            app:destination="@+id/gameFragment2"
+            app:popUpTo="@+id/gameFragment2"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameWonFragment2"
+
+        android:name="com.example.praktikum7.GameWonFragment2"
+        android:label="Game Won2"
+        tools:layout="@layout/fragment_game_won2">
+        <action
+
+            android:id="@+id/action_gameWonFragment_to_gamefragment3"
+            app:destination="@+id/gameFragment3"
+            app:popUpTo="@+id/gameFragment3"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameWonFragment3"
+
+        android:name="com.example.praktikum7.GameWonFragment3"
+        android:label="Game Won3"
+        tools:layout="@layout/fragment_game_won3">
+        <action
+
+            android:id="@+id/action_gameWonFragment_to_titleFragment"
+            app:destination="@+id/titleFragment"
+            app:popUpTo="@+id/titleFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+</navigation>
